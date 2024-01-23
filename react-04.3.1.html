@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+		<div id="root"></div>
+		
+    <script type="text/babel">
+			function Lists( props ) {
+				return <li> { props.name } </li>;
+			}
+
+			function Fruits() {
+				const list = [
+					{id: 1, name: '토마트'},
+					{id: 2, name: '사과'},
+					{id: 3, name: '파인애플'}
+				];
+
+				return (
+					<section>
+						<h3>구매할 과일 목록</h3>
+						<ul>
+							{ list.map( ( i ) => <Lists key= { i.id }  name= { i.name } />) }
+						</ul>
+					</section>
+				);
+			}
+
+			const root = ReactDOM.createRoot( document.getElementById('root') );
+			root.render( <Fruits /> );
+		</script>
+  </body>
+</html>
