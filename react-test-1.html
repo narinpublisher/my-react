@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+      function MyReact() {
+        return (
+            <div>
+                컴퓨터에 리액트 환경을 설정하지 않고<br />
+                <span style= {{fontweight:'bold', color:'orange'}}>3개의 스크립트를 CDN으로 연결하여
+                </span><br />
+		  return (
+		    <div>
+			컴퓨터에 리액트 환경을 설정하지 않고<br />
+			<span style= {{fontweight:'bold', color:'orange'}}>
+				3개의 스크립트를 CDN으로 연결하여
+			</span>
+			<br />즉시 리액트를 테스트해 볼 수 있습니다.
+		</div>
+        );
+      }
+      
+      const container = document.getElementById('mydiv');
+      const root = ReactDOM.createRoot(container);
+      root.render(<MyReact />)
+    </script>
+
+  </body>
+</html>
