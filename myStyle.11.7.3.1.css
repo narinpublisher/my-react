@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+section {
+	display: inline-block; border: 2px dashed #ddd; padding: 10px;
+}
+.aqua {
+	color:aqua; font-weight:bold; text-shadow:1px 1px 5px blue;
+}
+.orange {
+	color:orange; text-shadow:1px 1px 7px yellow;
+}
