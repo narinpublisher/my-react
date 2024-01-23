@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<link rel='stylesheet' href='./myStyle.css'>
+  </head>
+  <body>
+		<div id="root"></div>
+		
+    <script type="text/babel">
+			const x = 5;
+			let text = '바나나';
+			if (x < 38) {
+				 text = '딸기';
+			}
+
+			const fruit = <p> { ( x ) < 38 ? '키위' : '오렌지' } </p>;
+			const myApp = ReactDOM.createRoot( document.getElementById('root') );
+			myApp.render( fruit );
+		</script>
+  </body>
+</html>
