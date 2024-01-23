@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+		<div id="root"></div>
+		
+    <script type="text/babel">
+			const myFruits = (
+				<table>
+					<tbody>
+						<tr>
+							<th>구매한 과일 목록</th>
+						</tr>
+						<tr>
+							<td>오렌지</td>
+						</tr>
+						<tr>
+							<td>파인애플</td>
+						</tr>
+						<tr>
+							<td>사과</td>
+						</tr>
+					</tbody>
+				</table>
+			);
+			
+			const sample_1 = document.getElementById( 'root' );
+			const sample_2 = ReactDOM.createRoot( sample_1 );
+			sample_2.render( myFruits );
+		</script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
