@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+		<div id="root"></div>
+    <script type="text/babel">
+			class Freedom extends React.Component {
+				render() {
+					return <h2>다문화 가정의 천국 『 KOREA 』</h2>;
+				}
+			}
+
+			const myApp = ReactDOM.createRoot( document.getElementById('root') );
+			myApp.render( <Freedom  /> );
+		</script>
+  </body>
+</html>
