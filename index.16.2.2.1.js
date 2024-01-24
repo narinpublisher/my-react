@@ -1,5 +1,5 @@
 function Sunset () {
-	const [name, setName]= useState ('');
+	const [name, setName]= React.useState ('');
 	const submitGo= ( event ) => {
 			event.preventDefault ();
 			alert ( ` 입력하신 제목은 ${ name } 입니다. ` );
