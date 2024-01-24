@@ -1,5 +1,5 @@
 function Sunset () {
-	const [name, setName]= useState ('');
+	const [name, setName]= useState('');
 	return (
 		<section>
 			<strong>
@@ -16,7 +16,7 @@ function Sunset () {
 					</label>
 			</form>
 		</section>
-	)
+	);
 }
 
 const textBox = ReactDOM.createRoot ( document.getElementById ('root') );
