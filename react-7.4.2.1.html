@@ -7,22 +7,21 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-		<div id="root"></div>
-		
-    <script type="text/babel">
-			const myFruits = (
-				<>
-					<h2>구매한 과일 목록</h2>
-					<ul>
-						<li>딸기</li>
-						<li>파인애플</li>
-						<li>포도</li>
-					</ul>
-				</>
-			);
+	<div id="root"></div>		
+	<script type="text/babel">
+		const myFruits = (
+			<>
+			<h2>구매한 과일 목록</h2>
+			<ul>
+				<li>딸기</li>
+				<li>파인애플</li>
+				<li>포도</li>
+			</ul>
+			</>
+		);
 
-			const rootEle = ReactDOM.createRoot( document.getElementById('root') );
-			rootEle.render( myFruits );
-		</script>
+		const rootEle = ReactDOM.createRoot( document.getElementById('root') );
+		rootEle.render( myFruits );
+	</script>
   </body>
 </html>
