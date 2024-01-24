@@ -2,24 +2,24 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width'>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-		<link rel='stylesheet' href='myStyle.10.6.1.css'>
+    <link rel='stylesheet' href='myStyle.10.6.1.css'>
   </head>
   <body>
-		<div id="root"></div>
-		<script type="text/babel" src="Mall.js"></script>
-    <script type="text/babel">
-			function Saturday(coex){
-				 return (
+	<div id="root"></div>
+	<script type="text/babel" src="Mall.js"></script>
+   	<script type="text/babel">
+		function Saturday(coex){
+			 return (
 				<h2> 저번주 토요일에는 친구들과  {coex.shop} <Mall />을 방문하여<br />
 				쇼핑도 하고 식사도 하며 즐거운 시간을 보냈습니다.</h2>
-				 );
-			}
-
-			const myApp = ReactDOM.createRoot( document.getElementById('root') );
-			myApp.render( <Saturday shop = '스타필드' /> );
-		</script>
+			 );
+		}
+		const myApp = ReactDOM.createRoot( document.getElementById('root') );
+		myApp.render( <Saturday shop = '스타필드' /> );
+	</script>
   </body>
 </html>
