@@ -13,3 +13,4 @@ const Layout = () => {
 		</section>
 	);
 }
+export default Layout;
