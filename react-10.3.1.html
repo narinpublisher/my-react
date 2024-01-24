@@ -2,23 +2,22 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width'>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-		<div id="root"></div>
-		
-    <script type="text/babel">
-			function BlueSky() {
-				return (
-					<p>빗방울이 뚝뚝뚝뚝 떨어지는 날에는 잔뜩 찡그린 얼굴로<br />
-					엄마 찾아 음매 아빠 찾아 음매 울상을 짓다가</p>
-				);
-			}
-
-			const myApp = ReactDOM.createRoot( document.getElementById('root') );
-			myApp.render( <BlueSky  /> );
-		</script>
+	<div id="root"></div>		
+   	 <script type="text/babel">
+		function BlueSky() {
+			return (
+				<p>빗방울이 뚝뚝뚝뚝 떨어지는 날에는 잔뜩 찡그린 얼굴로<br />
+				엄마 찾아 음매 아빠 찾아 음매 울상을 짓다가</p>
+			);
+		}
+		const myApp = ReactDOM.createRoot( document.getElementById('root') );
+		myApp.render( <BlueSky  /> );
+	</script>
   </body>
 </html>
