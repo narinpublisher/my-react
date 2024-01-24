@@ -8,7 +8,7 @@ function Sunset () {
 			</strong>
 			<form>
 					<br />
-					<label 
+					<label> 
 						이 동요의 제목은? &nbsp;
 						<input type='text' value= { name }
 						       onChange= { e => setName( e.target.value )}
