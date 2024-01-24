@@ -26,4 +26,4 @@ class Autumn extends React.Component {
 }
 
 const leaves = ReactDOM.createRoot( document.getElementById('root') );
-leaves.render( <Sky  /> );
+leaves.render( <Autumn  /> );
