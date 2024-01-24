@@ -1,7 +1,3 @@
-import { useState } from 'react';
-import ReactDOM from 'react-dom/client';
-import './myStyle.css';
-
 function Sunset () {
 	const [name, setName]= useState ('');
 	const submitGo= ( event ) => {
