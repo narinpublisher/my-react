@@ -15,7 +15,7 @@ function Sunset () {
 						/>
 					</label>
 			</form>
-		</section>ㅍ
+		</section>
 	)
 }
 
