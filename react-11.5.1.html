@@ -2,34 +2,35 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width'>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-		<div id="root"></div>
-    <script type="text/babel">
-			class Colorful extends React.Component {
-				 render(){
-						return <p>색동옷 갈아 입은 가을 언덕에</p>;
-				 }
-			}
-			class Sunset extends React.Component {
-				 render(){
-						return (
-							 <section>
+	<div id="root"></div>
+    	<script type="text/babel">
+		class Colorful extends React.Component {
+			 render(){
+				return <p>색동옷 갈아 입은 가을 언덕에</p>;
+			 }
+		}
+		class Sunset extends React.Component {
+			 render(){
+				return (
+					 <section>
 									<h1>(동요) 노을</h1>
 									<p>바람이 머물다간 들판에</p>
 									<p>모락모락 피어나는 저녁연기</p>
 									<Colorful />
 									<p>빨갛게 노을이 타고 있어요</p>
-							 </section>
-						)
-				 }
+					</section>
+				)
 			}
+		}
 
-			const myApp = ReactDOM.createRoot( document.getElementById('root') );
-			myApp.render( <Sunset /> );
-		</script>
+		const myApp = ReactDOM.createRoot( document.getElementById('root') );
+		myApp.render( <Sunset /> );
+	</script>
   </body>
 </html>
