@@ -2,22 +2,21 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width'>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-		<div id="root"></div>
-		
-    <script type="text/babel">
-			function Mall( props ){
-				 return (
-						<h2>친구들과 함께 { props.shop }에서 쇼핑도하고 식사도 하며 즐거운 시간을 보냈습니다.</h2>
-				 )
-			}
-
-			const reactApp = ReactDOM.createRoot( document.getElementById('root') );
-			reactApp.render( <Mall shop="스타필드" /> );
-		</script>
+	<div id="root"></div>		
+   	<script type="text/babel">
+		function Mall( props ){
+			 return (
+					<h2>친구들과 함께 { props.shop }에서 쇼핑도하고 식사도 하며 즐거운 시간을 보냈습니다.</h2>
+			 )
+		}
+		const reactApp = ReactDOM.createRoot( document.getElementById('root') );
+		reactApp.render( <Mall shop="스타필드" /> );
+	</script>
   </body>
 </html>
