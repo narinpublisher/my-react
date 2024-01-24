@@ -17,7 +17,7 @@ function Sunset () {
 						<input type='text' value= { name }
 						  onChange= { ( e ) => setName( e.target.value )}  
 						/>
-					</label>
+					</label>&nbsp;
 					<button>전송하기</button>
 			</form>
 		</section>
