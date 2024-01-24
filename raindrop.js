@@ -1,7 +1,7 @@
 function Children ( pro ) {
 	return (
 			<li>
-				<b className='aqua'>{ pro.rain }</b>
+				<b className='aqua'>{ pro.rain }</b> &#9748;
 			</li>
 	);
 }
