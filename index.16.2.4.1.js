@@ -1,5 +1,5 @@
 function Barley () {
-	const [ txt, setTextarea ]= useState ('보리수 가사를 입력하세요.');
+	const [ txt, setTextarea ]= React.useState('보리수 가사를 입력하세요.');
 		const writeTxt= ( event ) => {
 		setTextarea ( event.target.value );
 	}
