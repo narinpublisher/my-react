@@ -2,27 +2,27 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width'>	
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-		<div id="root"></div>
-		
-    <script type="text/babel">
-			const myFruits = (
-				<main>
-					<h2>구매한 과일 목록</h2>
-					<ul>
-						<li>딸기</li>
-						<li>파인애플</li>
-						<li>포도</li>
-					</ul>
-				</main>
-			);
+	<div id="root"></div>		
+  	<script type="text/babel">
+		const myFruits = (
+			<main>
+				<h2>구매한 과일 목록</h2>
+				<ul>
+					<li>딸기</li>
+					<li>파인애플</li>
+					<li>포도</li>
+				</ul>
+			</main>
+		);
 
-			const rootEle = ReactDOM.createRoot( document.getElementById('root') );
-			rootEle.render( myFruits );
-		</script>
+		const rootEle = ReactDOM.createRoot( document.getElementById('root') );
+		rootEle.render( myFruits );
+  	</script>
   </body>
 </html>
