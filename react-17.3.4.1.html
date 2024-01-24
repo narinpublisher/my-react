@@ -8,6 +8,43 @@
   </head>
   <body>
 		<div id="root"></div>
-    <script type="text/babel" src='pages/layout.js'></script>
+    <script type="text/babel">
+		
+		
+		
+const Layout = () => {
+	return (
+		<section>
+			<nav>
+				<ul id='menu'>
+						<li><Link to='/'>홈화면</Link></li>
+						<li><Link to='/branch'>가지에</Link></li>
+						<li><Link to='/hope'>희망의 말</Link></li>
+						<li><Link to='/eng'>새기어 놓고서</Link></li>
+				</ul>
+			</nav>			
+		<Outlet />
+		</section>
+	);
+}
+		
+function App () {
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path='/' element= { <La /> }>
+				   <Route index element= { <Hom /> } />
+				   <Route path='branch'	element= { <Br /> } />
+				   <Route path='hope' element= { <Ho /> } />
+				   <Route path='eng' element= { <En /> } />
+				</Route>
+			</Routes>
+		</BrowserRouter>
+	);
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+		</script>
   </body>
 </html>
