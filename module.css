@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+body {
+	margin:30px 0;
+}
+.rainbowBg {
+	max-width:500px;
+	margin:auto;
+	background: linear-gradient( orange, pink );
+	text-shadow: 0 0 10px red;
+	text-align: center;
+	padding: 20px 50px;
+	border-radius:30px;
+	box-shadow:3px 3px 5px rgba(0,0,0, 0.5);
+}
