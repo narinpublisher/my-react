@@ -13,8 +13,8 @@ const count = ( { total } ) => {
 };
 
 const MyApp = () => {
-	const [ number , add ] = useState ( 0 );
-	const [ increase , setTo ] = useState ( [ ] );
+	const [ number , add ] = React.useState ( 0 );
+	const [ increase , setTo ] = React.useState ( [ ] );
 		const increment = () => {
 			add ( ( i ) =>   i + 1 );
 		};
