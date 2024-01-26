@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width'>  
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<link rel='stylesheet' href='sass.scss'>
+  </head>
+  <body>
+	<div id="root"></div>		
+	<script type="text/babel">
+		const Rainbow = () => {
+			return (
+					<section>
+						<h1>React Sass 스타일</h1>
+						<ul>
+							<li>CSS 파일을 생성하는 것과 같은 방식으로 Sass 파일을 만듭니다.</li>
+							<li>Sass 파일의 파일 확장자는 파일명.scss입니다.</li>
+							<li>Sass 파일에서는 변수 및 기타 Sass 함수를 사용할 수 있습니다.</li>
+						</ul>
+					</section>
+			);
+		}
+
+		const myApp = ReactDOM.createRoot ( document.getElementById ( 'root' ) );
+		myApp.render ( <Rainbow /> );
+	</script>
+  </body>
+</html>
