@@ -1,4 +1,4 @@
-export default function Counter() {
+function Counter() {
   let ref = React.useRef( 0 );	
 
   function handleClick() {
