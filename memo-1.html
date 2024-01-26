@@ -10,8 +10,46 @@
   </head>
   <body>
 
-    <div id="memo"></div>
-		<script type="text/babel" src='memo-1.js'></script>		
+    <div id="root"></div>
+		<script type="text/babel">
+		
+			const Count = ( { total } ) => {
+					console.log ( '갱신 될 때만 렌더링됩니다.' );
+
+					return (
+						<section>
+							<h2>카운트</h2>
+							{ 
+								total.map ( ( txt , idx ) => {
+									return <num key = { idx }>  { txt }  </num> ;
+							} ) }
+						</section>
+					);
+			};
+
+			const MyApp = () => {
+				const [ number , add ] = React.useState ( 0 );
+				const [ increase , setTo ] = React.useState ( [ ] );
+					const increment = () => {
+						add ( ( i ) =>   i + 1 );
+					};
+					return (
+					<>
+						<Count total = { increase } />
+						<hr />
+						<>
+							카운트 : { number } &nbsp;
+							<button onClick = { increment }>   +   </button>
+						</><br />
+						<b><small>[+]버튼을 클릭할 때마다 카운트 숫자는 증가합니다.</small></b>
+					</>
+				);
+			}
+
+			const clock = ReactDOM.createRoot ( document.getElementById ( 'root' ) );
+			clock.render ( <MyApp /> );		
+		
+		</script>		
 
   </body>
 </html>
