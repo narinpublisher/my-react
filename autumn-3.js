@@ -1,7 +1,7 @@
 class Autumn extends React.Component {
 	constructor( props ){
 		super( props );
-		this.state= { txt: '에머럴드빛 하늘'};
+		this.state= { txt: '에머럴드빛 하늘 '};
 	}
 	shouldComponentUpdate(){
 		return true;
