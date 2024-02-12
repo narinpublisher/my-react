@@ -18,5 +18,5 @@ class Election extends React.Component {
 	}
 }
 
-const yellow = ReactDOM.createRoot( document.getElementById('root') );
-yellow.render( <Election /> );
+const vote = ReactDOM.createRoot( document.getElementById('root') );
+vote.render( <Election /> );
