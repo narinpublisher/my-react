@@ -1,8 +1,8 @@
-function Children ( pro ) {
+function Children ( x ) {
 	return (
 			<li>
 				<b className='aqua'>
-					{ pro.num } { pro.text }
+					{ x.num } { x.text }
 				</b> &#9748;
 			</li>
 	);
