@@ -17,7 +17,7 @@ function BabyGoat () {
 			<>
 				<h2>동요_ 아기염소</h2>
 				<ul>
-					{ items.map ( ( song ) => <Children rain= { song } /> ) }
+					{ items.map ( ( index ) => <Children rain= { index } /> ) }
 				</ul>
 			</>
 	)
