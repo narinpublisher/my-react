@@ -1,5 +1,5 @@
 function Tree () {
-	const [ inputs , setInputs ] = useState ( { } );
+	const [ inputs , setInputs ] = React.useState ( { } );
 	const submitGoGo = event => {
 		const { value, name } = event.target; // event.target 에서 name과 value를 추출.
 		setInputs ( event => ( {
