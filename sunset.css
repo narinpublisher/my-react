@@ -3,3 +3,6 @@
 section {
 	display: inline-block; border: 2px dashed #ddd; padding: 10px 30px;
 }
+h1 {
+	margin: 0;
+}
