@@ -1,16 +1,15 @@
 function Tree () {
-	const [ inputs, setInputs ]= React.useState( { } );
-		const submitGoGo= ( event ) => {
-		const name=  event.target.name;
-		const value=  event.target.value;
-		setInputs ( values => ( { ...values, [name]: value } ) );
+   const [ inputs, setInputs ]= React.useState( { } );
+	const submitGoGo= ( event ) => {
+		   const { value, name } = event.target; // event.target 에서 name 과 value 를 추출.
+		   setInputs ( values => ( { ...values, [name]: value } ) );
 	}
-		const submitGo= ( ev ) => 	{
-		ev.preventDefault ();
-		console.log ( inputs );
+	const submitGo= ( ev ) =>  {
+		   ev.preventDefault ();
+		   console.log ( inputs );
 	}
-		return (
- 		<section>
+	return (
+ 		   <section>
 			<h1>가곡_ 비목</h1>
 			<form onSubmit= { submitGo }>
 			   	<input type= 'text' name= 'txt1'  value= { inputs.txt1 || ''} 
@@ -21,7 +20,7 @@ function Tree () {
 				<br />이름 모를 비목이여<br />
 				<button>전송하기</button>
 			</form>
-		</section>
+		   </section>
 	)
 }
 
