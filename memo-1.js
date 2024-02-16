@@ -1,4 +1,4 @@
-const count = ( { total } ) => {
+const Count = ( { total } ) => {
 		console.log ( '갱신 될 때만 렌더링됩니다.' );
 
 		return (
@@ -10,17 +10,17 @@ const count = ( { total } ) => {
 				} ) }
 			</section>
 		);
-};
+}
 
 const MyApp = () => {
 	const [ number , add ] = React.useState ( 0 );
 	const [ increase , setTo ] = React.useState ( [ ] );
 		const increment = () => {
 			add ( ( i ) =>   i + 1 );
-		};
+	}
 		return (
 		<>
-			<Timer total = { increase } />
+			<Count total = { increase } />
 			<hr />
 			<>
 				Count : { number } &nbsp;
@@ -31,5 +31,5 @@ const MyApp = () => {
 	);
 }
 
-const clock = ReactDOM.createRoot ( document.getElementById ( 'memo' ) );
+const clock = ReactDOM.createRoot ( document.getElementById ( 'root' ) );
 clock.render ( <MyApp /> );
