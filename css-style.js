@@ -7,5 +7,5 @@ const ExternalCss  = () => {
 	);	
 }
 
-const addStyle = ReactDOM.createRoot ( document.getElementById ( 'style' ) );
+const addStyle = ReactDOM.createRoot ( document.getElementById ( 'root' ) );
 addStyle.render ( <ExternalCss /> );
