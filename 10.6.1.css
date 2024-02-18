@@ -1,0 +1,19 @@
+
+
+h1 {
+  margin: 0;  
+}
+
+
+.SpeBorder {
+  padding: 10px 10px;
+  border: 10px solid;
+}
+
+.Border_blue {
+  border-color: blue;
+}
+
+.Para_1 {
+  font-size: larger;
+}
