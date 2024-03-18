@@ -27,7 +27,7 @@ class BarleyTree extends React.Component {
 				기쁘나 슬플때나 찾아온 나무밑<br />
 				찾아온 나무밑<br /><br />
 				<span id='para1' className='yellowgreen'></span>
-				<span id='para2' className='yellowgreen'></span>
+				<span id='para2' className='orange'></span>
 			</p>
 		);
 	}
