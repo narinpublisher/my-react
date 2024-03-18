@@ -1,0 +1,11 @@
+{ 
+    "exclude": ["node_modules"] , //컴파일 제외 파일
+    "include": ["typescript/*"] ,   //컴파일 되는 파일. typescript폴더내의 모든파일(*)
+    "compilerOptions": {
+		"target": "es2016" ,     //컴파일 될 js버전
+		"module": "commonjs" , //js모듈처리 규칙
+		"outDir": "./js ",         //컴파일 될 js파일 위치
+		"rootDir":"./typescript",  //컴파일 할 ts파일 위치
+		"strict": true            //엄격규칙
+  } 
+}
