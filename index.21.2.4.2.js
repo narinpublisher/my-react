@@ -14,7 +14,7 @@ function MyHair() {
       }}
     >
       <h1>나의 헤어는 { hair }색 입니다.</h1>
-      <button onClick={() => changeColor( "레드와인" , "red" )}  >  // 상태 업데이트 함수 호출
+      <button onClick={() => changeColor( "레드와인" , "red" )}  >  /* 상태 업데이트 함수 호출 */
         색상 변경하기
       </button>
     </section>
