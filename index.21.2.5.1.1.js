@@ -9,10 +9,11 @@
       return (
         <section
           style={{
-            backgroundColor: "orange",
-            padding: "30pt",
-            borderRadius: "30pt",
-            textAlign: "center",
+        backgroundColor: "orange",
+        padding: "30pt 50px",
+        borderRadius: "30pt",        
+        width: "300px",
+        margin : "auto"
           }}
         >
           <h1>동요_ 노을 3절</h1>
