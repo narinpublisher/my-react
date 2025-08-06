@@ -9,19 +9,18 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-	<div id="root"></div>
-    	<script type="text/babel">
-		class Water extends React.Component {
-			 constructor(){
-					super();
-					this.state = { who : " 누가와서 "};
-			}
-			render(){
-					return <h2>깊은 산 속 옹달샘{this.state.who}먹나요</h2>;
-			 }
-		}
-		const myApp = ReactDOM.createRoot( document.getElementById('root') );
-		myApp.render( <Water /> );
-	</script>
+    <div id="root"></div>
+    <script type="text/babel">
+      // 함수형 컴포넌트 Water
+      const Water = () => {
+        // 상태 값 선언
+        const [ who , setWho ] = React.useState("누가와서");
+        // JSX 반환
+        return <h2>깊은 산 속 옹달샘 {who} 먹나요</h2>;
+      }
+
+      const myApp = ReactDOM.createRoot(document.getElementById('root'));
+      myApp.render( <Water /> );
+    </script>
   </body>
 </html>
