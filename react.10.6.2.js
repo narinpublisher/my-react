@@ -1,22 +1,22 @@
 //React는 강력한 합성(Composition) 모델을 가지고 있으며, 상속 대신 합성을 사용하여 컴포넌트 간에 코드를 재사용하는 것이 좋습니다.
 	//어떤 컴포넌트들은 어떤 자식 엘리먼트가 들어올 지 미리 예상할 수 없는 경우가 있습니다. 이러한 컴포넌트에서는 특수한 children prop을 사용하여 자식 엘리먼트를 출력에 그대로 전달하는 것이 좋습니다. 
-function SpecialBorder(props) {
+function SpecialBorder({ children , color }) {
   return (
-    <div className={'SpeBorder Border_' + props.color}>		  
-      {props.children}
+    <div className={`SpeBorder Border_${ color }`}>		  
+      { children }
     </div>
   );
 }
 
 //FancyBorder는 {props.children}을 <div> 안에 렌더링하므로 전달된 엘리먼트들이 최종 출력됩니다.
-function Content_1(props) {	
+function Content_1( { title , message }) {	
   return (
     <SpecialBorder color="blue">
       <h1>
-        {props.title}
+        { title }
       </h1>
       <p className="Para_1 ">
-        {props.message}
+        { message }
       </p>
     </SpecialBorder>
   );
@@ -33,4 +33,5 @@ function Welcome() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Welcome />);
+
 
