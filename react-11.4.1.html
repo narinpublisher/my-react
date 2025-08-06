@@ -2,25 +2,37 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
-    <meta name='viewport' content='width=device-width'>
+    <meta name="viewport" content="width=device-width">
+    <title>React with Babel</title>
+    
+    <!-- React와 ReactDOM을 CDN으로 불러오기 -->
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    
+    <!-- Babel을 CDN으로 불러오기 -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-	<div id="root"></div>
-    	<script type="text/babel">
-		class We extends React.Component {
-			 constructor(props){
-					super(props);
-			 }
-			 render(){
-				return <h2>우리우리 { this.props.newYear } 오늘이래요</h2>;
-			 }
-		}
+    <!-- React 앱이 렌더링될 root div -->
+    <div id="root"></div>
 
-		const myApp = ReactDOM.createRoot( document.getElementById('root') );
-		myApp.render( <We newYear= ' 설날은' /> );
-	</script>
+    <!-- JSX와 JavaScript를 포함하는 Babel 스크립트 -->
+    <script type="text/babel">
+      // 함수형 컴포넌트 We
+      const We = ( { newYear } ) => {
+        const [ message , setMessage ] = useState('') ;  // 상태 값 선언
+
+        // useEffect 훅을 사용하여 컴포넌트가 렌더링될 때마다 메시지 출력
+        useEffect(() => {
+          setMessage(`${ newYear } 오늘이래요`);
+        } ,  [ newYear ] ) ;  // newYear prop이 변경될 때마다 효과 실행
+
+        return <h2>{ message }</h2>;
+      };
+
+      // ReactDOM을 사용하여 We 컴포넌트를 렌더링
+      const myApp = ReactDOM.createRoot( document.getElementById( 'root' ) ) ;
+      myApp.render( <We  newYear= "설날은" /> );
+    </script>
   </body>
 </html>
