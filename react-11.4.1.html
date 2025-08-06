@@ -18,6 +18,8 @@
 
     <!-- JSX와 JavaScript를 포함하는 Babel 스크립트 -->
     <script type="text/babel">
+      // React의 훅을 불러옵니다
+      const { useState, useEffect } = React;
       // 함수형 컴포넌트 We
       const We = ( { newYear } ) => {
         const [ message , setMessage ] = useState('') ;  // 상태 값 선언
@@ -36,3 +38,4 @@
     </script>
   </body>
 </html>
+
