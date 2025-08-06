@@ -1,5 +1,5 @@
-const Lists = props => {
-  return <ul>{ props.children }</ul>
+const Lists = ({ children }) => {
+  return <ul>{ children }</ul>
 }
 
 const Fruits = () => (
@@ -13,4 +13,5 @@ const Fruits = () => (
 
 const root = ReactDOM.createRoot(document.getElementById( 'root' ));
 root.render( <Fruits /> );
+
 
