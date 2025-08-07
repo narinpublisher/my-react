@@ -1,18 +1,39 @@
-      const { useState } = React;
+function List( { getNum } ) {
+  const [ nums, setNum ] = React.useState( [] );
+ 
+  React.useEffect( () => {    
+    setNum( getNum() );
+  }, [ getNum ] );
 
-      const Autumn = () => {
-        // 상태 선언: sunset이라는 상태를 useState로 관리
-        const [sunset, setSunset] = useState('모락모락 피어나는 저녁 연기');
+  return (
+    <div style= { { background: '#ddd' , maxWidth: '170px' } } >
+	{  nums.map( ( i ) => ( <div key= { i }> { i } </div> ) )  }
+    </div>
+  );
+};
 
-        return (
-          <section>
-            <p>가을바람 머물다 간 들판에</p>
-            <p>{sunset}</p>
-            <p>색동옷 갈아입은 가을 언덕에</p>
-            <p>붉게 물들어 타는 저녁놀</p>
-          </section>
-        );
-      };
+function App() {
+  const [ numList, setList ] = React.useState(123);
 
-      const root = ReactDOM.createRoot(document.getElementById('root'));
-      root.render(<Autumn />);
+  const getNum = React.useCallback( () => {
+    return [ numList + 10, numList + 100 ];
+  } , [ numList ] );
+
+  const change = ( e ) => {
+    if ( Number(e.target.value )) {
+      setList( Number( e.target.value ) );
+    } else { alert('숫자만 입력해 주세요.'); }
+  };
+
+  return (
+    <>
+      <div>
+        <input type= "text" value= { numList } onChange= { change } /><br />
+        <List getNum= { getNum } />
+      </div>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
