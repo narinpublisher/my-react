@@ -1,39 +1,19 @@
-function List( { getNum } ) {
-  const [ nums, setNum ] = React.useState( [] );
- 
-  React.useEffect( () => {    
-    setNum( getNum() );
-  }, [ getNum ] );
-
-  return (
-    <div style= { { background: '#ddd' , maxWidth: '170px' } } >
-	{  nums.map( ( i ) => ( <div key= { i }> { i } </div> ) )  }
-    </div>
-  );
-};
-
-function App() {
-  const [ numList, setList ] = React.useState(123);
-
-  const getNum = React.useCallback( () => {
-    return [ numList + 10, numList + 100 ];
-  } , [ numList ] );
-
-  const change = ( e ) => {
-    if ( Number(e.target.value )) {
-      setList( Number( e.target.value ) );
-    } else { alert('숫자만 입력해 주세요.'); }
-  };
-
-  return (
-    <>
-      <div>
-        <input type= "text" value= { numList } onChange= { change } /><br />
-        <List getNum= { getNum } />
-      </div>
-    </>
-  );
+class Autumn extends React.Component {
+   constructor(props) {
+      super(props);
+      this.state = { sunset : '모락모락 피어나는 저녁 연기' };
+   }
+   render(){
+      return (
+         <section>
+            <p>가을바람 머물다 간 들판에</p>
+            <p>{ this.state.sunset }</p>
+            <p>색동옷 갈아입은 가을 언덕에</p>
+            <p>붉게 물들어 타는 저녁놀</p>
+         </section>
+      );
+   }
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+const myApp = ReactDOM.createRoot( document.getElementById( 'root' ) );
+myApp.render( <Autumn /> );
