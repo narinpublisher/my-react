@@ -4,7 +4,7 @@
 // Autumn 컴포넌트 (화살표 함수형 컴포넌트)
 const Autumn = () => {
   // txt: 상태 변수, setTxt: 상태를 변경하는 함수, 초기 상태값은 '에머럴드빛 하늘 '
-  const [txt, setTxt] = useState('미역들로 반찬무쳐 ');
+  const [txt, setTxt] = useState('미역들로 반찬 무쳐 ');
 
   // 버튼 클릭 시 상태 값을 변경하는 함수
   const changeTxt = () => {
@@ -31,4 +31,5 @@ const Autumn = () => {
 
 // ReactDOM.createRoot()로 root 요소를 선택하고 Autumn 컴포넌트를 렌더링
 const leaves = ReactDOM.createRoot(document.getElementById('root'));
+
 leaves.render(<Autumn />);
