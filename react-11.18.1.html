@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8">
-    <meta name='viewport' content='width=device-width'>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-	<div id="root"></div>
-    	<script type="text/babel" src='tree-18.js'></script>
+    <div id="root"></div>
+    <script type="text/babel">
+      const BarleyTree = () => {
+        const [show, setShow] = React.useState(true);
+
+        const delText = () => {
+          setShow(false);
+        };
+
+        return (
+          <main>
+            가지에 희망의 말 새기어 넣고서<br />
+            {show && <Child />}
+            <br />
+            <button type="button" onClick={delText}>
+              마운트 해제하기
+            </button>
+          </main>
+        );
+      };
+
+      const Child = () => {
+        React.useEffect(() => {
+          return () => {
+            alert("BarleyTree 컴포넌트는 마운트 해제됩니다.");
+          };
+        }, []);
+
+        return <p>기쁘나 슬플 때나 찾아온 나무 밑</p>;
+      };
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<BarleyTree />);
+    </script>
   </body>
 </html>
