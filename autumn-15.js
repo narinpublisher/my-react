@@ -1,9 +1,9 @@
     const { useState } = React;
 
-    function Autumn() {
+    const Autumn= ()=> {
       const [txt, setTxt] = useState('에머럴드빛 하늘');
 
-      const changeTxt = ㅁ() => {
+      const changeTxt = () => {
         setTxt('색동옷 갈아입은 ');
       };
 
