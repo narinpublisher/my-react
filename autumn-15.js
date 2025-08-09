@@ -18,7 +18,7 @@ const Autumn = () => {
       햇볕은 쨍쨍 모래알은 반짝<br />
       모래알로 떡 해 놓고<br />
       {/* txt 상태값을 화면에 표시 */}
-      <b className="orange">{txt}</b>
+      <b className="orange">{txt}</b><br />
         언니 누나 모셔다가<br />
       맛있게도 냠냠<br /><br />
       {/* 버튼 클릭 시 changeTxt 함수 실행 */}
@@ -31,4 +31,5 @@ const Autumn = () => {
 
 // ReactDOM.createRoot()로 root 요소를 선택하고 Autumn 컴포넌트를 렌더링
 const leaves = ReactDOM.createRoot(document.getElementById('root'));
+
 leaves.render(<Autumn />);
