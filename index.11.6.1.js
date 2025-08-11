@@ -16,4 +16,5 @@ class Yellow extends React.Component {
    }
 }
 
-export default Yellow;
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Yellow />);
