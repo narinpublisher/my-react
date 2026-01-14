@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing React code</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/react-router-dom@6/umd/react-router-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const {
+        HashRouter,
+        Routes,
+        Route,
+        Link
+      } = ReactRouterDOM;
+
+      /* pages */
+      const Home = () => <h1>Home</h1>;
+      const Branch = () => <h1>On the Branch</h1>;
+      const Hope = () => <h1>Words of Hope</h1>;
+      const Eng = () => <h1>Engraved Within</h1>;
+
+      const App = () => (
+        <HashRouter>
+          <section>
+            <nav>
+              <ul className="menu">
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/branch">On the Branch</Link></li>
+                <li><Link to="/hope">Words of Hope</Link></li>
+                <li><Link to="/eng">Engraved Within</Link></li>
+              </ul>
+            </nav>
+
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/branch" element={<Branch />} />
+              <Route path="/hope" element={<Hope />} />
+              <Route path="/eng" element={<Eng />} />
+            </Routes>
+          </section>
+        </HashRouter>
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
