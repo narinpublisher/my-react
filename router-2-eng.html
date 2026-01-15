@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Router v5 Learning - English</title>
+
+  <!-- React + ReactDOM -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+  <!-- React Router v5 -->
+  <script src="https://unpkg.com/react-router-dom@5.3.4/umd/react-router-dom.min.js"></script>
+
+  <!-- Babel (for JSX parsing in browser) -->
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="router-2-eng.css">
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { BrowserRouter, Route, Switch, Link } = ReactRouterDOM;
+
+    // Page Components
+    const Home = () => <h1>First Page</h1>;
+    const Branch = () => <h1>Branch</h1>;
+    const Hope = () => <h1>Words of Hope</h1>;
+    const Engraving = () => <h1>Engraving</h1>;
+
+    // Layout + Menu
+    const Layout = ({ children }) => {
+      const [bgColor, setBgColor] = React.useState('transparent');
+      const [activeIndex, setActiveIndex] = React.useState(0);
+
+      const go = (i) => {
+        const menu = document.querySelectorAll('#menu li');
+        for (let j = 0; j < menu.length; j++) {
+          menu[j].style.border = 'none';
+          menu[j].classList.remove('act');
+        }
+        const colors = ['transparent', 'gold', 'yellowgreen', 'pink'];
+        menu[i].style.border = '2px dashed dodgerblue';
+        menu[i].classList.add('act');
+        setBgColor(colors[i]);
+        setActiveIndex(i);
+      };
+
+      return (
+        <section style={{ backgroundColor: bgColor }}>
+          <nav>
+            <ul id="menu">
+              {['Home', 'Branch', 'Words of Hope', 'Engraving'].map((text, i) => (
+                <li key={i} className={i === activeIndex ? 'act' : ''}>
+                  <Link to={i===0?'/' : i===1?'/branch' : i===2?'/hope':'/eng'} onClick={() => go(i)}>
+                    {text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          {children}
+        </section>
+      );
+    };
+
+    // App Component
+    const App = () => (
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/branch" component={Branch} />
+            <Route path="/hope" component={Hope} />
+            <Route path="/eng" component={Engraving} />
+          </Switch>
+        </Layout>
+      </BrowserRouter>
+    );
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>

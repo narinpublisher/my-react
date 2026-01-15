@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/* Main container section */
+section {
+  border: 2px dashed #666;
+  padding: 10px 30px;
+  max-width: 800px;
+  min-height: 90vh; /* Ensure the section takes most of the viewport height */
+  margin: auto;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 30px;
+}
+
+/* Navigation menu */
+#menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Menu items */
+#menu li {
+  text-align: center;
+  flex: 1;
+}
+
+/* Menu links */
+#menu a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+/* Hover effect & active menu item */
+#menu a:hover,
+#menu li.act a { 
+  display: inline-block;
+  transform: scale(1.2);
+  text-shadow: 1px 1px 5px red;
+}
