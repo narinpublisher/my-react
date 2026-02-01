@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width'>
+    <title>React Test</title>
+    <!-- React libraries -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script
+     <!-- Babel for JSX support -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+	<div id="freedom"></div>		
+   	<script type="text/babel">
+		const myFruits = (
+			<table>
+				<tbody>
+					<tr>
+						<th>Purchased Fruit List</th>
+					</tr>
+					<tr>
+						<td>Orange</td>
+					</tr>
+					<tr>
+						<td>Pineapple</td>
+					</tr>
+					<tr>
+						<td>Apple</td>
+					</tr>
+				</tbody>
+			</table>
+		);
+
+		const element_1 = document.getElementById( 'freedom' );
+		const rootEle = ReactDOM.createRoot( element_1 );
+		rootEle.render( myFruits );
+	</script>
+  </body>
+</html>
