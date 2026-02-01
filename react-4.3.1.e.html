@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name='viewport' content='width=device-width'>
-    <title>Fruit Shopping List</title>
+    <title>React Test</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -11,26 +11,9 @@
   <body>
 	<div id="root"></div>		
 	<script type="text/babel">
-		function Lists( props ) {
-			return <li> { props.name } </li>;
-		}
-		function Fruits() {
-			const list = [
-  			  { id: 1,  name: 'Tomato' } ,
-  			  { id: 2,  name: 'Apple' } ,
-   			  { id: 3,  name: 'Pineapple' }
-			];
-			return (
-				<section>
-					<h3>Fruit Shopping List</h3>
-					<ul>
-						{ list.map( ( i ) => <Lists key= { i.id }  name= { i.name } />) }
-					</ul>
-				</section>
-			);
-		}
+		const myApp = <h1>React Test</h1>;
 		const root = ReactDOM.createRoot( document.getElementById('root') );
-		root.render( <Fruits /> );
+		root.render( myApp );
 	</script>
   </body>
 </html>
