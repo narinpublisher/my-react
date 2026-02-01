@@ -1,0 +1,29 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+// Component names use PascalCase
+// (The first letter of each word is capitalized, with no spaces between words)
+function Lists( props ) {
+  return <li> { props.name } </li>;
+}
+
+// Component names use PascalCase
+function Fruits() {
+  const list = [
+    { id: 1,  name: 'Tomato' } ,
+    { id: 2,  name: 'Apple' } ,
+    { id: 3,  name: 'Pineapple' }
+  ];
+
+  return (
+    <section>
+        <h3>Fruit Shopping List</h3>
+                <ul>
+                        { list.map( ( i ) => <Lists key= { i.id }  name= { i.name } /> ) }
+                </ul>
+    </section>
+  );
+}
+// Location where the component is rendered
+const root = ReactDOM.createRoot( document.getElementById('root') ); 
+root.render( <Fruits /> ); // Component to render
