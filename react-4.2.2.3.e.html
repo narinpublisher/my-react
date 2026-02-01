@@ -1,29 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-// Component names use PascalCase
-// (The first letter of each word is capitalized, with no spaces between words)
-function Lists( props ) {
-  return <li> { props.name } </li>;
-}
-
-// Component names use PascalCase
-function Fruits() {
-  const list = [
-    { id: 1,  name: 'Tomato' } ,
-    { id: 2,  name: 'Apple' } ,
-    { id: 3,  name: 'Pineapple' }
-  ];
-
-  return (
-    <section>
-        <h3>Fruit Shopping List</h3>
-                <ul>
-                        { list.map( ( i ) => <Lists key= { i.id }  name= { i.name } /> ) }
-                </ul>
-    </section>
-  );
-}
-// Location where the component is rendered
-const root = ReactDOM.createRoot( document.getElementById('root') ); 
-root.render( <Fruits /> ); // Component to render
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width'>
+    <title>Fruit Shopping List</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+	<div id="root"></div>		
+	<script type="text/babel">
+		function Lists( props ) {
+			return <li> { props.name } </li>;
+		}
+		function Fruits() {
+			const list = [
+  			  { id: 1,  name: 'Tomato' } ,
+  			  { id: 2,  name: 'Apple' } ,
+   			  { id: 3,  name: 'Pineapple' }
+			];
+			return (
+				<section>
+					<h3>Fruit Shopping List</h3>
+					<ul>
+						{ list.map( ( i ) => <Lists key= { i.id }  name= { i.name } />) }
+					</ul>
+				</section>
+			);
+		}
+		const root = ReactDOM.createRoot( document.getElementById('root') );
+		root.render( <Fruits /> );
+	</script>
+  </body>
+</html>
