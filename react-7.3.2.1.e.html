@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>React App Test</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+	<div id="root"></div>
+	<script type="text/babel">
+		// Variable names use camelCase
+		const myFruits = (
+		   <>
+			<h2>Fruit Shopping List</h2>
+			<ul>
+				<li>Strawberries</li>
+				<li>Pineapple</li>
+				<li>Grapes</li>
+			</ul>
+		   </>
+		);
+
+		const rootEle = ReactDOM.createRoot( document.getElementById("root") );
+		rootEle.render( myFruits );
+	</script>
+  </body>
+</html>
