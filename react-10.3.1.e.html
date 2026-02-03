@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>React App Test</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function BlueSky() {
+        return (
+          <>
+            <p>On a day when raindrops keep falling,</p>
+            <p>with a deeply frowning face, calling for mom and dad.</p>
+          </>
+        );
+      }
+
+      const myApp = ReactDOM.createRoot(
+        document.getElementById('root')
+      );
+      myApp.render(<BlueSky />);
+    </script>
+  </body>
+</html>
