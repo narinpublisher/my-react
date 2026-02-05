@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>React App Test</title>
+
+    <!-- React and ReactDOM (CDN) -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Babel: compiles JSX in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Root element where the React app will be mounted -->
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // Freedom component (function component)
+      const Freedom = () => {
+        return <h2>A Haven for Multicultural Families, “KOREA”</h2>;
+      };
+
+      // Create a React 18 root
+      const myApp = ReactDOM.createRoot(
+        document.getElementById("root")
+      );
+
+      // Render the component with React.StrictMode enabled
+      // StrictMode helps detect potential issues during development
+      myApp.render(
+        <React.StrictMode>
+          <Freedom />
+        </React.StrictMode>
+      );
+    </script>
+  </body>
+</html>
