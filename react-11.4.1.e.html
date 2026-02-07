@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>React with Babel</title>
+
+    <!-- Load React and ReactDOM from CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load Babel for JSX support -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <!-- Root element for React -->
+    <div id="root"></div>
+
+    <!-- JSX + JavaScript -->
+    <script type="text/babel">
+      const { useState, useEffect } = React;
+
+      // Function component: We
+      const We = ({ newYear }) => {
+        const [message, setMessage] = useState('');
+
+        // Update message whenever newYear changes
+        useEffect(() => {
+          setMessage(`${newYear} today`);
+        }, [newYear]);
+
+        return <h2>We {message}</h2>;
+      };
+
+      // Render the component
+      const myApp = ReactDOM.createRoot(
+        document.getElementById('root')
+      );
+
+      myApp.render(<We newYear="Lunar New Year is" />);
+    </script>
+  </body>
+</html>
