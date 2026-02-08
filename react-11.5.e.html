@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Function Component Example</title>
+
+  <!-- React & ReactDOM CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Babel CDN -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    // Colorful component
+    const Colorful = () => {
+      return <p>On the autumn hill dressed in colorful clothes</p>;
+    };
+
+    // Sunset component
+    const Sunset = () => {
+      return (
+        <section>
+          <h1>(Children’s Song) Sunset</h1>
+          <p>Across the field where the wind once lingered</p>
+          <p>Soft evening smoke gently rises</p>
+          <Colorful />
+          <p>The sunset glows in deep red</p>
+        </section>
+      );
+    };
+
+    const root = ReactDOM.createRoot(
+      document.getElementById('root')
+    );
+
+    root.render(<Sunset />);
+
+  </script>
+</body>
+</html>
