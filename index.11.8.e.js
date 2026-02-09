@@ -10,7 +10,7 @@ const Gate = () => {
       <h1 className="aqua">Wilhelm Muller – The Linden Tree</h1>
       <p>
         {korea.attention}
-        {korea.communism}
+        {korea.communism}<br />
         {korea.eradicate}<br />
        I dreamed in its shadow<br />
        So many a sweet dream<br />
@@ -21,4 +21,5 @@ const Gate = () => {
   );
 };
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(<Gate />);
