@@ -1,24 +1,24 @@
 const Gate = () => {
   const korea = {
-    attention: 'Before the city gate ',
-    communism: 'beside the well ',
-    eradicate: 'stands the linden tree'
+    attention: 'By the fountain  ',
+    communism: ' by the gateway ',
+    eradicate: 'There stands a linden tree'
   };
 
   return (
     <section>
-      <h1 className="aqua">Wilhelm Müller – The Linden Tree</h1>
+      <h1 className="aqua">Wilhelm Muller – The Linden Tree</h1>
       <p>
         {korea.attention}
         {korea.communism}
         {korea.eradicate}<br />
-        I dreamed sweet dreams beneath its shade<br />
-        Words of hope engraved upon its bark<br />
-        In joy and sorrow, I returned to that tree
+       I dreamed in its shadow<br />
+       So many a sweet dream<br />
+        I carved in its bark<br />
+        So many a cherished word
       </p>
     </section>
   );
 };
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Gate />);
