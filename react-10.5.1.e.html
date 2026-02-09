@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>React App Test</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function Mall() {
+        return <b>COEX Mall Branch</b>;
+      }
+
+      function Saturday({ shop }) {
+        return (
+          <h2>
+            Last Saturday, I visited {shop} <Mall /> with my friends,
+            <br />
+            where we enjoyed shopping and dining together.
+          </h2>
+        );
+      }
+
+      const myApp = ReactDOM.createRoot(
+        document.getElementById('root')
+      );
+      myApp.render(<Saturday shop="Starfield" />);
+    </script>
+  </body>
+</html>
