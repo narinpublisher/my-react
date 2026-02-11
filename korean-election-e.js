@@ -1,11 +1,11 @@
 const { useState, useEffect } = React;
 
 function Election() {
-  const [votes , setVotes] = useState('Generous early voting period?');
+  const [votes , setVotes] = useState('Fair elections are held. X❌');
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setVotes('Abolish early voting immediately!');
+      setVotes('Election fraud occurs! O');
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -13,7 +13,7 @@ function Election() {
 
   return (
     <p>
-      What could be more important than exercising your precious right to vote?<br />
+      What problems arise when using electronic devices in election voting systems?<br />
       <b className="red">{votes}</b>
     </p>
   );
