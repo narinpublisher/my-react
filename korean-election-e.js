@@ -1,11 +1,11 @@
 const { useState, useEffect } = React;
 
 function Election() {
-  const [votes , setVotes] = useState('Fair elections are held. X❌');
+  const [votes , setVotes] = useState('Fair elections are held. ❌');
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setVotes('Election fraud occurs! O');
+      setVotes('Election fraud occurs! ⭕');
     }, 2000);
 
     return () => clearTimeout(timer);
