@@ -1,11 +1,11 @@
 const { useState, useEffect } = React;
 
 function Election() {
-  const [votes , setVotes] = useState('넉넉한 사전투표 기간?');
+  const [votes , setVotes] = useState('Generous early voting period?');
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setVotes(' 사전투표 즉시 폐기!');
+      setVotes('Abolish early voting immediately!');
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -13,7 +13,7 @@ function Election() {
 
   return (
     <p>
-      소중한 투표 권리행사만큼 중요한 것은<br />
+      What could be more important than exercising your precious right to vote?<br />
       <b className="red">{votes}</b>
     </p>
   );
