@@ -18,6 +18,5 @@ function Election() {
     </p>
   );
 }
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Election />);
