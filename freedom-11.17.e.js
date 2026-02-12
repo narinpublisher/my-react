@@ -8,7 +8,7 @@ const Freedom = () => {
   // Change state 3 seconds after the component first appears
   React.useEffect(() => {
     const timer = setTimeout(() => {
-      setBeforeText('The text ' + compare + ' changed to ');  
+      setBeforeText('The text "' + compare + '" changed to ');  
       setCompare('"Different!"');
     }, 3000);
 
