@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+.aqua {
+	color:aqua; text-shadow:1px 1px 5px blue;
+}
+.yellowgreen {
+	color:yellowgreen; font-size:0.8rem;
+}
+.orange {
+	color:orange; font-size:0.8rem;
+}
