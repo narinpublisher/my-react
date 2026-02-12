@@ -1,7 +1,7 @@
 // Babel standalone version: React and ReactDOM are loaded globally from CDN
 const Freedom = () => {
   // Declare state variables (using React.useState)
-  const [compare, setCompare] = React.useState('Ambiguous. '); // initial value
+  const [compare, setCompare] = React.useState('Ambiguous'); // initial value
   const [beforeText, setBeforeText] = React.useState('');          // message before change
   const [afterText, setAfterText] = React.useState('');                 // message after change
 
