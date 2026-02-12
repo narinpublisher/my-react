@@ -9,7 +9,7 @@ const Freedom = () => {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setBeforeText('The text ' + compare + ' changed to ');  
-      setCompare('Different!');
+      setCompare('"Different!"');
     }, 3000);
 
     // Cleanup function: remove timer when component unmounts
@@ -18,7 +18,7 @@ const Freedom = () => {
 
   // Runs when compare state changes
   React.useEffect(() => {
-    if (compare === 'Different!') {
+    if (compare === '"Different!"') {
       setAfterText(compare + ' after 3 seconds.'); 
     }
   }, [compare]);
