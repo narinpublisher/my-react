@@ -19,7 +19,7 @@ const Freedom = () => {
   // Runs when compare state changes
   React.useEffect(() => {
     if (compare === 'Different!  ') {
-      setAfterText(compare + ' It has been changed.');
+      setAfterText('The text' +compare + 'changed after 3 seconds.');
     }
   }, [compare]);
 
