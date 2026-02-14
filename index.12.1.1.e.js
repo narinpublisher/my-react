@@ -11,7 +11,7 @@ function Rainstorm () {
 		<> 
 			Through long years of wind and rain,<br />
 			An unnamed monument stands,<br />
-			<MonumentTree  sky=“The distant sky of childhood friends left behind" />
+			<MonumentTree  sky='The distant sky of childhood friends left behind' />
 		</>
 	)
 }
