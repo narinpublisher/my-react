@@ -11,7 +11,7 @@ function Ra () {
 	return (
 		<>
 		     Through long years of wind and rain, an unnamed monument stands<br />
-		     Mo  sky= { friend } />
+		     <Mo  sky= { friend } />
 		</>
 	)
 }
