@@ -1,9 +1,9 @@
 function Monu () {
-	const memories = () => {
+	const memory = () => {
 		alert( 'memories' );
 	}
 	return (
-		<button onClick= { memories }>
+		<button onClick= { memory }>
 			"Pure (  ) from long ago are so sad"
 			What word should I put in the parentheses (  )?
 		</button>
@@ -13,3 +13,4 @@ function Monu () {
 const song = ReactDOM.createRoot ( document.getElementById('root') );
 
 song.render ( <Monu /> );
+
