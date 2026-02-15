@@ -1,6 +1,6 @@
 function Monu () {
 	const memory = () => {
-		alert( 'Memory' );
+		alert( 'memories' );
 	}
 	return (
 		<button onClick= { memories }>
