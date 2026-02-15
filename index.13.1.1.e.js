@@ -1,5 +1,5 @@
 function Monu () {
-	const memory = () => {
+	const memories = () => {
 		alert( 'memories' );
 	}
 	return (
@@ -11,4 +11,5 @@ function Monu () {
 }
 
 const song = ReactDOM.createRoot ( document.getElementById('root') );
+
 song.render ( <Monu /> );
