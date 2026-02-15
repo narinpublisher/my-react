@@ -4,7 +4,7 @@ function Monu () {
 	}
 	return (
 		<button onClick= { memory }>
-			"Pure (  ) from long ago are so sad"
+			"Pure (  ) from long ago are so sad"<br/>
 			What word should I put in the parentheses (  )?
 		</button>
 	)
@@ -13,4 +13,5 @@ function Monu () {
 const song = ReactDOM.createRoot ( document.getElementById('root') );
 
 song.render ( <Monu /> );
+
 
