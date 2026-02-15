@@ -1,7 +1,7 @@
 function Mo ( props ) {
 	return (
 		<>
-			The distant sky of childhood friends left behindbr />
+			The distant sky of childhood friends left behind<br />
 			Longing <i className='orange'>{ props.miss.jo }</i>
 			like moss  <i className='orange'>{ props.miss.re }</i>
 		</>
