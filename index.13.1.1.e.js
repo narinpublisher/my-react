@@ -3,13 +3,12 @@ function Monu () {
 		alert( 'Memory' );
 	}
 	return (
-		<button onClick= { memory }>
-			'In those innocent days of long ago (  ) felt sorrowful'<br />
-			What word belongs inside the parentheses?
+		<button onClick= { memories }>
+			"Pure (  ) from long ago are so sad"
+			What word should I put in the parentheses (  )?
 		</button>
 	)
 }
 
 const song = ReactDOM.createRoot ( document.getElementById('root') );
-
 song.render ( <Monu /> );
