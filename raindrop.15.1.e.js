@@ -1,9 +1,10 @@
 import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-function Children ( pro ) {
+function Children ( props ) {
 	return (
 		<li>
-			<b className='aqua'>{ pro.rain }</b> &#9748;
+			<b className='aqua'>{ props.rain }</b> &#9748;
 		</li>
 	);
 }
@@ -19,7 +20,9 @@ function BabyGoat () {
 		<>
 			<h2>Children’s Song – Baby Goat</h2>
 			<ul>
-				{ items.map ( ( index ) => <Children rain= { index } /> ) }
+				{  items.map ( ( item,index ) => (
+				    <Children key={index} rain= { item } /> 
+				 ) ) }
 			</ul>
 		</>
 	)
