@@ -3,7 +3,7 @@ const Tree = ()=> {
 	const submitGoGo= ( event ) => {
 		const name=  event.target.name;
 		const value=  event.target.value;
-		setInputs ( values => ( { ...values, [name] : value } ) );
+		se    tInputs ( values => ( { ...values, [name] : value } ) );
 	}
 	const submitGo= ( ev )  =>  {
 		ev.preventDefault ();
@@ -11,14 +11,14 @@ const Tree = ()=> {
 	}
 	return (
  		<section>
-			<h1>Art Song – "Memorial Marker"</h1>
+			<h1>Art Song – "Bimok"</h1>
 			<form onSubmit= { submitGo }>
 			   	<input type= 'text' name= 'txt1'  value= { inputs.txt1 || ''}
 				onChange= { submitGoGo } />
-				<br />Deep in the valley, on a sunny hillside<br />
+				<br />Deep valley in the glow of eventide<br />
 				<input type= 'text' name= 'txt2'  value= { inputs.txt2 || '' }
 				onChange= { submitGoGo } />
-				<br />For the nameless wooden cross, left behind.<br />
+				<br />Made illegible by wind, rain and time<br />
 				<button>Submit</button>
 			</form>
 		</section>
