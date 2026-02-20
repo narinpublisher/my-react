@@ -1,5 +1,5 @@
 const Tree = ()=> {
-	const [ inputs , setInputs ]= useState ( { } );
+	const [ inputs , setInputs ]= React.useState ( { } );
 	const submitGoGo= ( event ) => {
 		const name=  event.target.name;
 		const value=  event.target.value;
@@ -26,4 +26,5 @@ const Tree = ()=> {
 }
 
 const textBox = ReactDOM.createRoot ( document.getElementById ('root') );
+
 textBox.render ( <Tree /> );
