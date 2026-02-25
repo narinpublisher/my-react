@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>React Router v5 Learning - English</title>
+
+  <!-- React + ReactDOM -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+  <!-- React Router v5 -->
+  <script src="https://unpkg.com/react-router-dom@5.3.4/umd/react-router-dom.min.js"></script>
+
+  <!-- Babel (for JSX parsing in browser) -->
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="router.e-1.css">
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { HashRouter, Route, Link } = ReactRouterDOM;
+
+    // Page Components (English + styled)
+    const Home = () => <h1>First Page</h1>;
+    const Branch = () => <h1 className="stylesaqua">Branch</h1>;
+    const Hope = () => <h1 className="stylesred">Words of Hope</h1>;
+    const Eng = () => <h1 className="stylesaqua">Engraving</h1>;
+
+    // SPA Layout + Menu
+    const App = () => {
+
+      const go = (i) => {
+        const menuItems = document.querySelectorAll('#menu li');
+        const bgColors = ['transparent', 'gold', 'yellowgreen', 'pink'];
+
+        menuItems.forEach((li) => {
+          li.style.border = 'none';
+          li.classList.remove('act');
+        });
+
+        menuItems[i].style.border = '2px dashed dodgerblue';
+        menuItems[i].classList.add('act');
+        document.body.style.backgroundColor = bgColors[i];
+      };
+
+      // Highlight the initial menu (Home)
+      React.useEffect(() => {
+        go(0);
+      }, []);
+
+      return (
+        <HashRouter>
+          <section>
+            <nav>
+              <ul id="menu">
+                {['Home', 'Branch', 'Words of Hope', 'Engraving'].map((text, i) => (
+                  <li key={i}>
+                    <Link
+                      to={i===0?'/' : i===1?'/branch' : i===2?'/hope':'/eng'}
+                      onClick={() => go(i)}
+                    >
+                      {text}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <Route exact path="/" component={Home} />
+            <Route path="/branch" component={Branch} />
+            <Route path="/hope" component={Hope} />
+            <Route path="/eng" component={Eng} />
+          </section>
+        </HashRouter>
+      );
+    };
+
+    // Render
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
