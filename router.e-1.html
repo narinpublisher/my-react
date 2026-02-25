@@ -26,9 +26,9 @@
 
     // Page Components (English + styled)
     const Home = () => <h1>First Page</h1>;
-    const Branch = () => <h1 className="stylesaqua">Branch</h1>;
+    const Branch = () => <h1 className="stylesaqua">On the Branch</h1>;
     const Hope = () => <h1 className="stylesred">Words of Hope</h1>;
-    const Eng = () => <h1 className="stylesaqua">Engraving</h1>;
+    const Eng = () => <h1 className="stylesaqua">Engraved Within</h1>;
 
     // SPA Layout + Menu
     const App = () => {
@@ -57,7 +57,7 @@
           <section>
             <nav>
               <ul id="menu">
-                {['Home', 'Branch', 'Words of Hope', 'Engraving'].map((text, i) => (
+                {['Home', 'Branch', 'Hope', 'Engraved'].map((text, i) => (
                   <li key={i}>
                     <Link
                       to={i===0?'/' : i===1?'/branch' : i===2?'/hope':'/eng'}
