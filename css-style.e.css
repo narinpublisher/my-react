@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+body {
+	background-color: pink;
+	color: white;
+	text-shadow: 0 0 10px red;
+	font-family: 'cursive';
+	text-align: center;
+}
+section {
+	max-width:500px;
+	margin:auto;
+	border:2px dashed gray;
+	padding:10px 30px;
+}
