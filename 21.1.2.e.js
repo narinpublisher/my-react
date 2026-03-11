@@ -1,6 +1,6 @@
 const MyCoat = () => {
-  	const [ color , setColor ] = useState ('black') ; 
-  	const [ activeIndex , setActiveIndex ] = useState(0); 
+  	const [ color , setColor ] = React.useState ('black') ; 
+  	const [ activeIndex , setActiveIndex ] = React.useState(0); 
   	const change = ( index , newColor ) => {
     		setColor( newColor );  
     		setActiveIndex( index );   };
