@@ -28,7 +28,7 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(<MyHair />);
-그림 21.2.4.1.1  렌더링 초기 상태
+
 
 
 
