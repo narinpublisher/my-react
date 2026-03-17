@@ -12,7 +12,7 @@
        		backgroundColor : "orange" ,
         		padding : "30pt 50px" ,
         		borderRadius : "30pt" ,
-        		width : "500px" ,
+        		width : "600px" ,
         		margin : "auto"
           	}}
           >
