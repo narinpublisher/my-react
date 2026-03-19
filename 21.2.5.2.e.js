@@ -3,7 +3,7 @@ function BabyGoat() {
     	t1 : ' On the green hillside' ,
     	t2 : '?? Cheerful baby goats ??' ,
     	t3 : 'With frowning little faces ' ,
-    	t4 : 'Calling for mom, bleating for dad ,
+    	t4 : 'Calling for mom, bleating for dad' ,
     	t5 : 'About to burst into tears'
   });
 
