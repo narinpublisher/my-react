@@ -1,18 +1,15 @@
-function Apple() {
-  const [ count , setCount ] = React.useState(0);
-
-  React.useEffect(() => {
-        if ( count> 10 ) { alert("You cannot exceed 10 items."); setCount(10); }
-  }, [count]);
-
-  return (
-    <section style={{ maxWidth:'300px', margin:'auto', border:'3px solid #ddd', padding: '10px 30px' }}>
-	<p>You have selected {count} apples.</p>
-	<meter value={count} min="0" max="10" style={{ width: '100%' }}></meter><br /><br />
-	<button onClick= { () => setCount(count + 1) }> Add </button>
-    </section>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(  <Apple />  );
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width'> 
+    <title>React Test</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+	<div id="root"></div>
+	<script type="text/babel" src='21.3.2.e.js'></script>
+  </body>
+</html>
